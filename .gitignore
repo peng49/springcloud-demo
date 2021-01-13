@@ -1,3 +1,4 @@
 .idea
 *.class
+**/peng49/spring-cloud-config-repo/**
 **/target/**

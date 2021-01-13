@@ -1,6 +1,7 @@
 package com.github.peng49.springclouddemo;
 
 import com.github.peng49.springclouddemo.service.TestService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -49,5 +50,14 @@ public class EurekaConsumerApplication {
     @RequestMapping("/consumerForFeign/{id}")
     public Map<String, String> consumerForFeignTest(@PathVariable("id") Integer id) {
         return testService.providerMethod(id);
+    }
+
+    @Value("${env}")
+    private String env;
+
+    @RequestMapping("/config")
+    public String configTest()
+    {
+        return this.env;
     }
 }
