@@ -1,8 +1,0 @@
-server:
-  port: 9500
-eureka:
-  instance:
-    instance-id: consumer-application  # 指定当前客户端在注册中心的名称
-  client:
-    service-url:
-      defaultZone: http://localhost:8300/eureka  # 服务中心的地址 就是我们在 Eureka Server 中配置的暴露地址

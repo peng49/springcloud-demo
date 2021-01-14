@@ -8,17 +8,17 @@
     <artifactId>springcloud-demo</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springcloud-eureka-server</module>
+        <module>springcloud-eureka-provider</module>
+        <module>springcloud-eureka-consumer</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.7.RELEASE</version><!-- lookup parent from repository -->
     </parent>
-
-    <modules>
-        <module>eureka-demo</module>
-        <module>config-server</module>
-    </modules>
 
     <properties>
         <java.version>1.8</java.version>
@@ -30,6 +30,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
         </dependency>
     </dependencies>
 
