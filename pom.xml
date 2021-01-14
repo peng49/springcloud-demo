@@ -12,6 +12,10 @@
         <module>springcloud-eureka-server</module>
         <module>springcloud-eureka-provider</module>
         <module>springcloud-eureka-consumer</module>
+        <module>springcloud-ribbon</module>
+        <module>springcloud-open-feign</module>
+        <module>springcloud-hystrix</module>
+        <module>springcloud-zuul</module>
     </modules>
 
     <parent>
