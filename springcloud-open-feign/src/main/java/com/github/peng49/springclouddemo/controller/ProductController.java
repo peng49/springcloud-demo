@@ -18,7 +18,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/list")
-    public List<Product> list() throws JsonProcessingException {
+    public List<Product> list() {
         return productService.all();
     }
 }
