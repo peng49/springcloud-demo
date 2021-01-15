@@ -16,6 +16,8 @@
         <module>springcloud-open-feign</module>
         <module>springcloud-hystrix</module>
         <module>springcloud-zuul</module>
+        <module>springcloudalibaba-sentinel</module>
+        <module>springcloudalibaba-nacos</module>
     </modules>
 
     <parent>
