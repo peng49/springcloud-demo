@@ -13,11 +13,11 @@ public class ProductService {
     private int port;
 
     public List<Product> all() {
-        try {
+        /*try {
             Thread.sleep(5000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         ArrayList<Product> products = new ArrayList<>();
         products.add(new Product(1, "手机"+this.port, 1000.11));
         products.add(new Product(2, "电脑"+this.port, 3000.11));

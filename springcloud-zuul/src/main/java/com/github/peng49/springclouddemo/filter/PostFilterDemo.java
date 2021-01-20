@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class PostFilterDemo extends ZuulFilter {
     @Override
     public String filterType() {
-        return null;
+        return "post";
     }
 
     @Override
@@ -20,11 +20,12 @@ public class PostFilterDemo extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return false;
+        return true;
     }
 
     @Override
     public Object run() throws ZuulException {
+        log.info(this.getClass().getName());
         return null;
     }
 }

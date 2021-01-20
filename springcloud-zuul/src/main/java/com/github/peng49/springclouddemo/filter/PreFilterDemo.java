@@ -50,7 +50,7 @@ public class PreFilterDemo extends ZuulFilter {
      */
     @Override
     public Object run() throws ZuulException {
-        log.info(PreFilterDemo.class.getName());
+        log.info(this.getClass().getName());
 
         RequestContext requestContext = RequestContext.getCurrentContext();
 
@@ -58,6 +58,8 @@ public class PreFilterDemo extends ZuulFilter {
         HttpServletRequest request = requestContext.getRequest();
 
         log.info(request.getHeader("User-Agent"));
+
+//        requestContext.setSendZuulResponse(false);
 
         return null;
     }
