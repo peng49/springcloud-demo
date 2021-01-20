@@ -18,6 +18,7 @@
         <module>springcloud-zuul</module>
         <module>springcloudalibaba-sentinel</module>
         <module>springcloudalibaba-nacos</module>
+        <module>springcloud-gateway</module>
     </modules>
 
     <parent>
