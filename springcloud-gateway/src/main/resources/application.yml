@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: gateway-demo
+  cloud:
+    gateway:
+      routes:
+        - id: test-id
+          uri: lb://openfeign-consumer
+          predicates:
+            - Path=/product/**
+          filters:
+            - RemoveRequestHeader=User-Agent
+            - AddRequestHeader=GatewayRequest,Yes
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:9100/eureka,http://localhost:9101/eureka
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
