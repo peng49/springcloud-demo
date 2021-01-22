@@ -19,6 +19,7 @@
         <module>springcloudalibaba-sentinel</module>
         <module>springcloudalibaba-nacos</module>
         <module>springcloud-gateway</module>
+        <module>nacos-provider</module>
     </modules>
 
     <parent>
