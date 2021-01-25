@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.peng49.springclouddemo.pojo.Product;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,9 @@ import java.util.List;
 @Slf4j
 public class ProductService {
 
+    @Value("${test.config}")
+    private String message;
+
     @Resource
     private RestTemplate restTemplate;
 
@@ -25,6 +29,10 @@ public class ProductService {
         String body = entity.getBody();
 
         log.info(body);
+
+        log.info("Config: {}",message);
+
+
 
         ObjectMapper mapper = new ObjectMapper();
 
