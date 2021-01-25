@@ -5,3 +5,6 @@ spring:
         server-addr: localhost:8848
         file-extension: yaml
         namespace: public
+logging:
+  level:
+    com.alibaba.nacos.client.config.impl: warn
