@@ -8,3 +8,6 @@ spring:
 logging:
   level:
     com.alibaba.nacos.client.config.impl: warn
+
+    # spring cloud gateway 配置
+    # com.alibaba.nacos.client.*: warn
